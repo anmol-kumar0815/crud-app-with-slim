@@ -1,12 +1,12 @@
-h1.text-blue All Students
+p.page-title Students List
 
-table
+table.students-table
   thead
-    tr
-      th Name
-      th Email
+    tr.table-row
+      th.table-header Name
+      th.table-header Email
   tbody
     - @students.each do |student|
-      tr
-        td = student.name
-        td = student.email
+      tr.table-row
+        td.table-column= student.name
+        td.table-column= student.email
