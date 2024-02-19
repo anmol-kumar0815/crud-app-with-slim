@@ -1,0 +1,12 @@
+h1 All Students
+
+table
+  thead
+    tr
+      th Name
+      th Email
+  tbody
+    - @students.each do |student|
+      tr
+        td = student.name
+        td = student.email
