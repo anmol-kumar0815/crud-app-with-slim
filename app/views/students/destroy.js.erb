@@ -1,4 +1,4 @@
-<% if @student.soft_deleted? %>
+<% if !@student.persisted? %>
   $('.table-row[data-id="<%= @student.id %>"]').remove();
 <% else %>
   alert("Something went wrong.")
