@@ -1,12 +1,8 @@
 class StudentsController < ApplicationController
-  before_action :load_student!, only: %i[show destroy]
+  before_action :load_student!, only: %i[destroy]
 
   def index
     @students = Student.all
-  end
-
-  def show
-
   end
 
   def destroy

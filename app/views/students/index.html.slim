@@ -8,8 +8,8 @@ table.students-table
       th.table-header Delete
   tbody
     - @students.each do |student|
-      tr.table-row
+      tr.table-row(data-id=student.id)
         td.table-column = student.name
         td.table-column = student.email
         td.table-column
-          = link_to "Delete", student_path(student), method: :delete, data: { "turbo-method": :delete }
+          = link_to "Delete", student_path(student), remote: true, method: :delete, data: { "turbo-method": :delete, confirm: "Are you sure you want to delete the student record." }
